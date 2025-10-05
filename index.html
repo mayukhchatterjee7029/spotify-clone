@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+
+<body>
+
+    <!-- Main Section Start -->
+    <section class="main">
+
+        <!-- Left Div Start -->
+        <div class="left circular">
+
+            
+            <div class="nav p1 circular">
+                <button id="cancel-icon" class="invert hamburger-toggle cancel-icon"></button>
+                <img id="header-logo" class="invert" src="assets/icons/logo.svg" alt="Spotify">
+                <ul>
+                    <li class="color-grey">
+                        <img class="invert icon" src="assets/icons/home.svg" alt="home">Home
+                    </li>
+                    <li class="color-grey">
+                        <img class="invert icon" src="assets/icons/search.svg" alt="Search">Search
+                    </li>
+                </ul>
+            </div>
+
+            <div class="library circular">
+
+                <div class="lib-nav p1">
+                    <ul>
+                        <li><img class="invert icon" src="assets/icons/library.svg" alt="icon"></li>
+                        <li class="color-grey">Your Library</li>
+                    </ul>
+                    <img class="icon" src="assets/icons/plus.svg" alt="">
+                </div>
+
+
+                <div class="playlists circular">
+                    <ul>
+
+                        <!-- <li class="song-card circular p1">
+                            <img class='music-icon invert' src="assets/icons/music-icon.svg" alt="music">
+                            <a class="songs color-grey" href='${songLinks[i]}'>
+                            </a>
+                            <p>${songNames[i]}</p>
+                            <p class="song-link">${songLinks[i]}</p>
+                            
+                            <img class='play-icon music-icon invert' src="assets/icons/play.svg" alt="play">
+                        </li> -->
+
+                    </ul>
+
+                    <!-- Legal LInks -->
+                    <div class="left-footer color-grey">
+                        <a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a>
+                        <a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety & Privacy
+                                Center</span></a>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                        <a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                        <a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left Div END -->
+
+
+        <!-- Right Div START -->
+        <div class="right circular">
+
+            <div class="nav p1 circular">
+                <span class="arrow">
+
+                    <button id="hamburger" class="invert icon hamburger-toggle"></button>
+
+                    <img class="invert icon" src="assets/icons/chevron-left.svg" alt="left">
+                    <img class="invert icon" src="assets/icons/chevron-right.svg" alt="right">
+                </span>
+                <span class="onboard">
+                    <button id="signup" class="onb-btn" type="button">Sign up</button>
+                    <button id="login" class="onb-btn" type="button">Log in</button>
+                </span>
+            </div>
+
+
+            <!-- Hero Parent Section Start -->
+            <section class="hero-parent">
+
+                <!-- Hero Row 1 Start -->
+                <h2 class="row-header">Spotify Playlists</h2>
+
+                <div class="hero-row1">
+
+                    <div class="play-card circular">
+                        <img class="play-img" src="assets/images/lisa_jp.png" alt="song">
+                        <div class="play-text">
+                            <h3 class="playlist-header">LiSA Best of 2025</h3>
+                            <p class="playlist-desc">All best LiSA hits curated for you</p>
+                        </div>
+                        <span class="play-green"></span>
+                    </div>
+
+                    <div class="play-card circular">
+                        <img class="play-img" src="assets/images/tkLTS_jp.png" alt="song">
+                        <div class="play-text">
+                            <h3 class="playlist-header">TK from LTS hits</h3>
+                            <p class="playlist-desc">Explore more like unravel</p>
+                        </div>
+                        <span class="play-green"></span>
+                    </div>
+
+                </div>
+                <!-- Hero Row 1 End -->
+                 
+                <h2 class="row-header">Playlists for you</h2>
+
+                <div class="hero-row2 hero-rows"></div>
+            </section>
+            <!-- Hero Parent Section End -->
+
+
+            <!-- Playbar Start -->
+            <div class="play-bar">
+                <div class="playbar-utilities">
+
+                    <div class="song-playing"></div>
+
+                    <div class="playbar-buttons">
+
+                        <!-- <button id="play-shuffle" class="play-control play-shuffle play-continious"></button> -->
+                        
+                        <button id="play-prev" class="invert play-control"></button>
+                        <button id="play-btn" class="invert play-control"></button>
+                        <button id="play-next" class="invert play-control"></button>
+                        
+                        <button id="play-loop" class="play-control play-loop play-continious"></button>
+                    </div>
+
+                    <div class="song-duration">00:00 / 00:00</div>
+                </div>
+
+                <div class="seekbar">
+                    <div id="progressBar" class="slider" min="0" max="100" value="0"></div>
+                    <div id="thumb"></div>
+                    <!-- <input type="range" id="progressBar" class="slider" min="0" max="100" value="0"> -->
+                </div>
+
+            </div>
+
+            <!-- Playbar End -->
+
+        </div>
+        <!-- Right Div END -->
+
+    </section>
+    <!-- Main Section END -->
+
+
+
+    <!-- Script Start -->
+    <script src="script.js"></script>
+    <!-- Script End -->
+</body>
+
+</html>

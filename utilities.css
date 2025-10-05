@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.invert {
+    filter: invert();
+}
+
+#header-logo {
+    width: 110px;
+    padding: 8px;
+}
+
+.color-grey {
+    color: #bab9b9;
+}
+
+.p1 {
+    padding: 12px;
+}
+
+.circular {
+    border-radius: 6px;
+}
+
+.icon {
+    width: 20px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    width: 22px;
+}
+
+.left>* :hover {
+    color: white;
+}
+
+
+/* Playlist Utilities Start */
+
+.song-card:hover {
+    background-color: #333;
+}
+
+.song-card:active {
+    background-color: #444;
+}
+
+.song-link {
+    display: none;
+}
+
+.music-icon {
+    width: 22px;
+    height: 22px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.play-icon {
+    border-radius: 50%;
+    border: none;
+}
+
+.play-icon:hover {
+    background-color: #e9e9e9;
+}
+
+.play-icon:active {
+    background-color: #999;
+    filter: invert(0);
+}
+
+/* Playlist Utilities End */
+
+
+.row-header {
+    padding: 8px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-toggle {
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+
+#hamburger{
+    background-image: url('assets/icons/hamburger.svg');
+    margin-right: 6px;
+}
+
+#cancel-icon{
+    background-image: url('assets/icons/cancel.svg');
+}
+
+.left .cancel-icon {
+    position: absolute;
+    right: 8px;
+    padding: 6px;
+    margin: 5px;
+    /* padding: 12px 6px; */
+}
+
+.arrow img {
+    padding: 8px;
+    /* margin-bottom: 1px; */
+}
+
+/* Onboarding Buttons Start */
+
+.onboard {
+    display: flex;
+}
+
+.onb-btn {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 26px;
+    margin: 4px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.onb-btn:hover {
+    font-weight: 700;
+    padding: 10px 28px;
+}
+
+#signup {
+    background-color: inherit;
+    color: #bab9b9;
+}
+
+#signup:hover {
+    color: white;
+    font-weight: 600;
+}
+
+/* Onboarding Buttons End */
+
+
+/* hides the scrollbar while keeping its functionality */
+.hero-parent::-webkit-scrollbar {
+    display: none;
+}
+
+.library::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333333d2;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+
+/* Playbar Start */
+.play-bar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 4px 12px;
+    background-color: #252525;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 12px;
+    width: 75vw;
+
+    position: fixed;
+    bottom: 10px;
+    opacity: 96%;
+    z-index: 2;
+}
+
+/* Playbar Utilities Start */
+
+.playbar-utilities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    gap: 16px;
+}
+
+.song-playing,
+.song-duration {
+    padding: 0 28px;
+    width: 100%;
+    font-size: 12px;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* border: 2px solid white; */
+    /* height: 32px; */
+}
+
+.song-playing:hover,
+.song-duration:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.song-duration {
+    text-align: right;
+}
+
+/* Playbar Buttons Start */
+.playbar-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0px 26px;
+}
+
+.play-control {
+    width: 54px;
+    height: 54px;
+    background-size: contain;
+    border: none;
+    padding: 18px;
+    background-color: #00000000;
+    background-size: 34px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-clip: border-box;
+    cursor: pointer;
+}
+
+#play-prev {
+    background-image: url("assets/icons/play-prev.svg");
+}
+
+#play-btn {
+    background-image: url("assets/icons/play-outline.svg");
+    /* background-image: url("assets/icons/pause.svg") */
+}
+
+#play-next {
+    background-image: url("assets/icons/play-next.svg");
+}
+
+/* #play-shuffle {
+    background-image: url("assets/icons/shuffle.svg");
+    background-size: 20px; 
+}
+#play-shuffle.shuffleOn {
+    background-image: url("assets/icons/shuffle-magenta.svg");
+} */
+
+#play-loop {
+    background-image: url("assets/icons/loop-play.svg");
+    background-size: 20px; 
+}
+
+#play-loop.loopOn {
+    background-image: url("assets/icons/loop-play-magenta.svg");
+}
+
+.play-continious {
+    width: 54px;
+    height: 54px;
+    filter: invert(1);
+} 
+
+
+.play-control:hover {
+    background-color: #e9e9e9;
+}
+
+.play-control:active {
+    background-color: #999;
+    filter: invert(0);
+}
+
+/* Playbar Buttons End */
+/* Playbar Utilities End */
+
+
+/* Seekbar Start */
+.seekbar {
+    display: flex;
+    border: 2px solid #ffffff99;
+    border-radius: 4px;
+    align-items: center;
+    /* justify-content: center; */
+    width: 96%;
+    position: relative;
+}
+
+.slider {
+    height: 2px;
+    position: inherit;
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
+    /* padding: 1px 0; */
+    background-color: #ffffff99;
+}
+
+#thumb {
+    border: 7px solid white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    left: 0%;
+    transition: left 0.5s;
+
+}
+
+/* Seekbar End */
+
+/* Playbar End */
