@@ -1,6 +1,9 @@
 // let musicDir = new URL("http://127.0.0.1:5500/Projects/Spotify%20clone/assets/songs/");
 // let musicDir = new URL("http://192.168.29.128:5500/Projects/Spotify%20clone/assets/songs/");
-let musicDir = new URL("https://mayukhchatterjee7029.github.io/spotify-clone/assets/songs/");
+
+const repoOwner = "mayukhchatterjee7029";
+const repoName = "spotify-clone";
+const folderPath = "assets/songs";
 
 let currentSong = new Audio();
 
@@ -8,6 +11,8 @@ let songLinks = [];
 let songNames = [];
 let playingNow;
 
+
+// Function showDuration
 function showDuration(current_time, song_duration) {
 
     let curTime = current_time.split('.')
@@ -25,16 +30,10 @@ function showDuration(current_time, song_duration) {
 }
 
 
-
-
-
+/*
+// Fetches the songs from the local machine's directory
 async function getSongs(musicDir) {
-
-    // let songLinks = []
-    // let songNames = []
-
     try {
-
         const response = await fetch(musicDir)
         if (!response.ok) {
             throw new Error(`Playlist not found! ${response.status}`);
@@ -57,7 +56,6 @@ async function getSongs(musicDir) {
             }
         })
 
-
         songsParsed = []
         songLinks.forEach((song) => {
             let fileName = song.split('/').pop()
@@ -67,17 +65,9 @@ async function getSongs(musicDir) {
 
             // Decoding Japanese Characters
             fileName = decodeURIComponent(fileName)
-            // .replace(/_g/g, ' ')
-            // .replace(/-/g, ' ')
-
             songsParsed.push(fileName)
             // console.log(fileName)
         })
-
-        // console.log(songsParsed)
-        // return [songsParsed, songLinks]
-
-
     }
     catch (error) {
         console.log('Something went wrong! ' + error);
@@ -86,7 +76,41 @@ async function getSongs(musicDir) {
     finally {
         return [songsParsed, songLinks]
     }
+}  */
+
+
+// Fetches the song using the Github API
+async function getSongsFromGitHub(repoOwner, repoName, folderPath) {
+    // const repoOwner = "mayukhchatterjee7029";
+    // const repoName = "spotify-clone";
+    // const folderPath = "assets/songs";
+
+    const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch songs: ${response.status}`);
+        }
+
+        const files = await response.json();
+
+        // Filter out only MP3 files
+        const mp3Files = files.filter(file => file.name.endsWith(".mp3"));
+
+        // Extract names and links
+        const songLinks = mp3Files.map(file => file.download_url);
+        const songNames = mp3Files.map(file =>
+            decodeURIComponent(file.name.replace(".mp3", "").replace(/_/g, " "))
+        );
+
+        return [songNames, songLinks];
+    } catch (error) {
+        console.error("Error fetching from GitHub API:", error);
+        return [[], []];
+    }
 }
+
 
 
 // PlayMusic Function
@@ -121,7 +145,7 @@ function shufflePlay(songNames, songLinks) {
 // Using IIFE to get the song names
 (async function mainFunc() {
 
-    let [songNames, songLinks] = await getSongs(musicDir)
+    let [songNames, songLinks] = await getSongsFromGitHub(repoOwner, repoName, folderPath)
 
     shufflePlay(songNames, songLinks)
 
