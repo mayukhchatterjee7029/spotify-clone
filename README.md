@@ -1,0 +1,2 @@
+# spotify-clone
+Educational project
