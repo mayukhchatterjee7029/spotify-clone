@@ -35,7 +35,7 @@ A fully functional music streaming web application built with vanilla HTML, CSS,
 
 ## 🚀 Live Demo
 
-**[View Live Demo](https://your-username.github.io/spotify-clone)** *(Replace with your actual GitHub Pages URL)*
+**[View Live Demo](https://mayukhchatterjee7029.github.io/spotify-clone/)** 
 
 ## 📸 Screenshots
 
@@ -71,7 +71,7 @@ A fully functional music streaming web application built with vanilla HTML, CSS,
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/spotify-clone.git
+   git clone https://github.com/mayukhchatterjee7029/spotify-clone.git
    cd spotify-clone
    ```
 
@@ -215,9 +215,43 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-**Your Name** - [@your-twitter](https://twitter.com/your-twitter) - your.email@example.com
+**Email** - mayukhchatterjee7029@gmail.com
 
-**Project Link**: [https://github.com/your-username/spotify-clone](https://github.com/your-username/spotify-clone)
+**Project Link**: [https://github.com/mayukhchatterjee7029/spotify-clone](https://github.com/mayukhchatterjee7029/spotify-clone)
+
+---
+
+## 🎵 Music Acknowledgments
+
+**Important Notice**: This project is for educational and demonstration purposes only. All music files used in this application are copyrighted material belonging to their respective artists and record labels.
+
+### 🎤 **Featured Artists**
+- **LiSA** - Japanese rock singer known for anime theme songs. I am a fan 😊
+- **Various Artists** - Additional tracks used for demonstration
+
+### ⚖️ **Copyright Disclaimer**
+All audio files included in this project are used for **educational and non-commercial purposes only** under fair use guidelines. The music remains the intellectual property of the original artists, composers, and record labels.
+
+**If you are the copyright owner** of any content used in this project and would like it removed, please contact the repository owner immediately.
+
+### 🚫 **Usage Restrictions**
+- This project is **NOT intended for commercial use**
+- Music files are **NOT redistributed** or sold
+- This is a **technical demonstration** of web audio capabilities
+- All rights remain with the original copyright holders
+
+### 💡 **For Personal Use**
+To use this application with your own music:
+1. Replace the demo songs with your **own music files**
+2. Use **royalty-free music** from sources like:
+   - [Freesound.org](https://freesound.org/)
+   - [YouTube Audio Library](https://www.youtube.com/audiolibrary)
+   - [Incompetech](https://incompetech.com/)
+   - [Bensound](https://www.bensound.com/)
+
+---
+
+**Respect artists and their work! 🎶 Support original creators by purchasing their music legally.**
 
 ---
 
