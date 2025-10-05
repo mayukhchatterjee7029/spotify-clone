@@ -39,6 +39,12 @@ A fully functional music streaming web application built with vanilla HTML, CSS,
 
 ## 📸 Screenshots
 
+<div align="left">
+  <img src="assets/demo/desktop-demo.png" alt="Desktop demo" height="180"/>
+  <img src="assets/demo/phone-demo.jpg" alt="Phone demo 1" height="180"/>
+  <img src="assets/demo/phone-demo-hamburger.jpg" alt="Phone demo 2" height="180"/>
+</div>
+
 ### Desktop View
 ```
 🖥️ Clean, Spotify-inspired interface with dark theme
