@@ -222,7 +222,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 
 - **Spotify** - Design inspiration
-- **Font Awesome** - Icon resources
+- **[Hugeicons](https://hugeicons.com)** - Icon resources
 - **Google Fonts** - Montserrat typography
 - **VS Code** - Development environment
 
