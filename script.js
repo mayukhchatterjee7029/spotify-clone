@@ -1,6 +1,7 @@
 // let musicDir = new URL("http://127.0.0.1:5500/Projects/Spotify%20clone/assets/songs/");
 // let musicDir = new URL("http://192.168.29.128:5500/Projects/Spotify%20clone/assets/songs/");
-let musicDir = new URL("https://github.com/mayukhchatterjee7029/spotify-clone/tree/main/assets/songs");
+let musicDir = new URL("https://mayukhchatterjee7029.github.io/spotify-clone/assets/songs/");
+
 let currentSong = new Audio();
 
 let songLinks = [];
